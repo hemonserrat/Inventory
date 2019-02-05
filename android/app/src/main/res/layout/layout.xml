@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp">
+
+    <TextView
+        android:id="@+id/summary_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:text="Summary Of Items"/>
+
+    <LinearLayout
+        android:layout_below="@+id/summary_view"
+        android:id="@+id/item_header"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/description_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textColor="@android:color/holo_red_dark"
+            android:text="Description" />
+
+        <TextView
+            android:id="@+id/description_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textColor="@android:color/holo_red_dark"
+            android:text="Quantity" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/item_header"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            android:text="Item Name" />
+
+        <TextView
+            android:id="@+id/item_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            android:text="Item Name" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_above="@+id/payOrderBtn"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/sales_price"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            android:text="Final Price" />
+
+        <TextView
+            android:id="@+id/sale_amount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_blue_bright"
+            android:text="300" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/payOrderBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:text="Pay"
+        android:textColor="@android:color/white"
+        android:background="@drawable/pay_button"/>
+
+</RelativeLayout>

@@ -1,0 +1,6 @@
+"Record number","SKU","Category","Stock","Discount","Expiry date","Cost","Margin","Net Price","Unit","Minimum","Total Value","Inventory Value","IMG URL","Under Stock","Enabled","Re-stocking","ReStock Cost","Item","Description"
+"5","1120005","Stationary","6","20","02/28/2019","10","40","12","U","10","72","60","https://dumielauxepices.net/sites/default/files/quill-clipart-transparent-background-734792-7816514.png","-4","No","4","40","Pen","Ballpoint pen"
+"4","1120004","Dairy","32","2","02/10/2019","3","20","3.54","L","10","113.28","96","https://www.berryondairy.com/image/127807203_scaled_111x243.jpg","22","No","-22","-66","Milk","Clover Whole Milk"
+"3","1120003","Drinks","100","5","02/02/2019","5","1","4.8","L","1","480","500","https://i5.walmartimages.com/asr/daefa364-88e7-45c9-bf08-d052f6fd5e82_1.1ae1011ee7ba1e4e903e51e52a95ed1b.jpeg?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff","99","No","-99","-495","Soda","Coca-Cola"
+"2","1120002","Bakery","50","10","02/10/2019","6","1","5.46","Lbs","1","273","300","http://labaguette.ca/wp-content/uploads/2015/09/croissant.jpg","49","Yes","-49","-294","Bakery","Croissants"
+"1","1120001","Fruit","2","10","02/02/2019","8","1","7.28","Lbs","1","14.56","16","https://images-na.ssl-images-amazon.com/images/I/31WUb7I%2BSvL.jpg","1","Yes","-1","-8","Apples","Be Organic Apples"

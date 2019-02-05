@@ -1,0 +1,79 @@
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterRoot = localProperties.getProperty('flutter.sdk')
+if (flutterRoot == null) {
+    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+}
+
+apply plugin: 'com.android.application'
+apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+
+android {
+    compileSdkVersion 27
+
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    defaultConfig {
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        //applicationId "exampleflutter.mfs.com.flutter3listview"
+        applicationId "example.flutter3listview"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath false
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            signingConfig signingConfigs.debug
+        }
+    }
+
+
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+
+    implementation 'com.android.support:support-v4:27.1.0'
+
+    // Poynt Dependencies
+    implementation 'co.poynt.api:android-api-model:1.2.120'
+    implementation 'co.poynt.android.sdk:poynt-sdk:1.2.33'
+
+    implementation 'com.google.code.gson:gson:2.8.2'
+
+    //implementation 'com.jakewharton:butterknife:7.0.1'
+
+    annotationProcessor 'com.jakewharton:butterknife:7.0.1'
+    implementation 'com.jakewharton:butterknife:7.0.1'
+
+    // JWT dependencies - if you want to parse JWTs
+    implementation 'net.jcip:jcip-annotations:1.0@jar'
+    implementation 'com.nimbusds:nimbus-jose-jwt:2.26@jar'
+    implementation 'net.minidev:json-smart:1.2@jar'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+}
